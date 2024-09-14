@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eVoters Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">eVoters</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vote-now">Vote Now</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCandidates" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Candidates & Parties
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCandidates">
+                            <li><a class="dropdown-item" href="#candidate-profiles">Candidate Profiles</a></li>
+                            <li><a class="dropdown-item" href="#party-manifestos">Party Manifestos</a></li>
+                            <li><a class="dropdown-item" href="#compare-candidates">Compare Candidates</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#results">Results</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHowToVote" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            How to Vote
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownHowToVote">
+                            <li><a class="dropdown-item" href="#voting-guide">Voting Guide</a></li>
+                            <li><a class="dropdown-item" href="#eligibility">Eligibility</a></li>
+                            <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAboutUs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAboutUs">
+                            <li><a class="dropdown-item" href="#mission-vision">Mission & Vision</a></li>
+                            <li><a class="dropdown-item" href="#team">Team</a></li>
+                            <li><a class="dropdown-item" href="#partners">Partners</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#security">Security</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownVoterEducation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Voter Education
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownVoterEducation">
+                            <li><a class="dropdown-item" href="#tutorials">Tutorials</a></li>
+                            <li><a class="dropdown-item" href="#articles">Articles</a></li>
+                            <li><a class="dropdown-item" href="#glossary">Glossary</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCommunity" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Community
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCommunity">
+                            <li><a class="dropdown-item" href="#forums">Forums</a></li>
+                            <li><a class="dropdown-item" href="#events">Events</a></li>
+                            <li><a class="dropdown-item" href="#volunteer">Volunteer Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownResources">
+                            <li><a class="dropdown-item" href="#election-laws">Election Laws</a></li>
+                            <li><a class="dropdown-item" href="#research-papers">Research Papers</a></li>
+                            <li><a class="dropdown-item" href="#links">Links</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSupport" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Support
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownSupport">
+                            <li><a class="dropdown-item" href="#help-center">Help Center</a></li>
+                            <li><a class="dropdown-item" href="#contact-us">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="#live-chat">Live Chat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMyAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMyAccount">
+                            <li><a class="dropdown-item" href="#profile">Profile</a></li>
+                            <li><a class="dropdown-item" href="#voting-history">Voting History</a></li>
+                            <li><a class="dropdown-item" href="#notifications">Notifications</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNewsMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            News & Media
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownNewsMedia">
+                            <li><a class="dropdown-item" href="#press-releases">Press Releases</a></li>
+                            <li><a class="dropdown-item" href="#media-coverage">Media Coverage</a></li>
+                            <li><a class="dropdown-item" href="#blogs">Blogs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <div class="container">
+            <a href="#terms-of-service" class="text-white">Terms of Service</a> |
+            <a href="#privacy-policy" class="text-white">Privacy Policy</a> |
+            <a href="#cookie-policy" class="text-white">Cookie Policy</a> |
+            <a href="#accessibility-statement" class="text-white">Accessibility Statement</a> |
+            <a href="#sitemap" class="text-white">Sitemap</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

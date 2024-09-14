@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Voting System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+    .party-logo {
+      max-height: 30px;
+      margin-right: 10px;
+      display: none; /* Initially hide all logos */
+    }
+    body {
+      background-color: white;
+      background-image: url('india-map-flag-EMEHDN-removebg-preview.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      color: black;
+    }
+    .voter-id, .state-field, .city-field, .legislative-assembly-field, .name-field, .reason-field {
+      max-width: 560px;
+    }
+    h2 {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <!-- Logo at the beginning -->
+      <a class="navbar-brand" href="#">
+        <img src="st2.jpg" width="100" height="110" class="d-inline-block align-top" alt="Logo 1">
+      </a>
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links -->
+      <!-- Heading in the center -->
+      <h1 class="navbar-brand center"><b>Vote for Your Preferred Political Party</b></h1>
+      <!-- Logo at the end -->
+      <a class="navbar-brand" href="#">
+        <img src="rrrr.png" width="80" height="80" class="d-inline-block align-top" alt="Logo 2">
+      </a>
+    </div>
+  </nav>
+  
+  <div class="container mt-2">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="votingForm" action="submit_vote.php" method="post">
+          <div class="form-group">
+            <label for="party"><b>Select Party:</b></label>
+            <div class="row">
+              <div class="col-md-6">
+                <select class="form-control" id="party" name="party">
+                  <option value="BJP">Bhartiya Janta Party</option>
+                  <option value="INC">Indian National Congress</option>
+                  <option value="SP">Samajwadi Party</option>
+                  <option value="AAP">AAM Aadmi Party</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <img src="BJP_flag.svg" alt="Bhartiya Janta Party Logo" class="party-logo" id="BJP-logo">
+                <img src="congress.png" alt="Indian National Congress Logo" class="party-logo" id="INC-logo">
+                <img src="samajwadi-party_1457291433.avif" alt="Samajwadi Party Logo" class="party-logo" id="SP-logo">
+                <img src="Aam_Aadmi_Party_logo_(English).svg.png" alt="AAM Aadmi Party Logo" class="party-logo" id="AAP-logo">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="voter_id"><b>Enter Voter ID:</b></label>
+            <input type="text" class="form-control voter-id" id="voter_id" name="voter_id" required>
+          </div>
+          <div class="form-group">
+            <label for="state"><b>State:</b></label>
+            <input type="text" class="form-control state-field" id="state" name="state" required>
+          </div>
+          <div class="form-group">
+            <label for="city"><b>City:</b></label>
+            <input type="text" class="form-control city-field" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="legislative_assembly"><b>Legislative Assembly:</b></label>
+            <input type="text" class="form-control legislative-assembly-field" id="legislative_assembly" name="legislative_assembly" required>
+          </div>
+          <div class="form-group">
+            <label for="name"><b>Name:</b></label>
+            <input type="text" class="form-control name-field" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="reason"><b>Reason to Vote:</b></label>
+            <textarea class="form-control reason-field" id="reason" name="reason" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Vote</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#party').change(function() {
+        var selectedParty = $(this).val();
+        $('.party-logo').hide();
+        $('#' + selectedParty + '-logo').show();
+      });
+
+      // Trigger the change event on page load to show the initial logo
+      $('#party').trigger('change');
+    });
+  </script>
+</body>
+</html>

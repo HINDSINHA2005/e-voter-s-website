@@ -1,0 +1,29 @@
+BODY{
+    margin: 0%;
+    background: url(WhatsApp\ Image\ 2024-04-25\ at\ 01.32.39_35fe9061.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center;
+}
+.formbox{
+    width:480px ;
+    height:auto ;
+    margin:auto;
+    margin-top: 4px;
+    background: white;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+a{
+   
+    color: aliceblue;
+    
+}

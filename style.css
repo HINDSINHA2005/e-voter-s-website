@@ -1,0 +1,80 @@
+body{
+    width: 100%;
+    margin: 0%;
+    background: url(flagbg.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: underline dashed;
+    margin-top: 120px;
+   
+    color:rgb(46, 0, 0);
+    font-weight: bolder;
+    margin-left: 50px;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: underline dashed;
+    color:darkgreen;
+}
+a{
+    text-decoration: none;
+}
+h2:hover{
+    color: blue;
+}
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: opacity 2s, visibility 2s;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid white;
+    border-top-color: brown;
+    border-radius: 50%;
+    animation:loading 1s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+img{
+    width: 150px;
+}
+.img1{
+    margin-left: 500px;
+}
+.copy{
+  text-align: center;
+  color:rgb(39, 18, 13);
+  margin-top: 230px;
+  font-family: 'Courier New', Courier, monospace;
+}

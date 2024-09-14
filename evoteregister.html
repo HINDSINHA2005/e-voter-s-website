@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Vote Registration</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .form-container {
+      width: 200px;
+      margin: auto;
+    }
+    
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Logo at the beginning -->
+          <a class="navbar-brand" href="#">
+            <img src="st2.jpg" width="100" height="110" class="d-inline-block align-top" alt="Logo 1">
+          </a>
+         
+          <!-- Navbar links -->
+          <!-- Heading in the center -->
+          <h1 class="navbar-brand center"><b><u>E-Vote Registration</u></b></h1>
+          <!-- Logo at the end -->
+          <a class="navbar-brand" href="#">
+            <img src="rrrr.png" width="80" height="80" class="d-inline-block align-top" alt="Logo 2">
+          </a>
+        </div>
+      </nav>
+  <div class="container mt-1">
+   
+    <form action="register.php" method="post">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name"  name="firstName"required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" name="lastName"required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter your age"   name="age" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender"  name="gender" required>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="voterId">Voter ID Number</label>
+        <input type="text" class="form-control" id="voterId" placeholder="Enter your voter ID number"  name="voterId" required>
+      </div>
+      <div class="form-group">
+        <label for="aadharCard">Aadhar Card Number</label>
+        <input type="text" class="form-control" id="aadharCard" placeholder="Enter your Aadhar card number"  name="aadharCard" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"  name="address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter your mobile number"   name="mobileNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control" id="dob"   name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email"   name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password"   name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password"  name="confirmPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

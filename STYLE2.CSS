@@ -1,0 +1,25 @@
+body{
+    margin-top: 0%;
+    background:url(WhatsApp\ Image\ 2024-04-25\ at\ 01.32.39_35fe9061.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center;
+}
+.myhind{
+    margin-top: 25px;
+}
+.copy{
+    text-align: center;
+    color:rgb(209, 196, 193);
+  
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .heading{
+    color: green;
+  }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color:white;
+    
+    }
+    /* Remove margin from top of the navbar */
+
+
+    .container {
+      margin-top: 1px;
+    }
+    .feedback-form {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .star-rating input[type="radio"] {
+      display: none;
+    }
+    .star-rating label {
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .star-rating label:before {
+      content: "\2605";
+      color: #ccc;
+    }
+    .star-rating input[type="radio"]:checked ~ label:before {
+      color: #ffc107;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+    }
+    .submit-btn {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <!-- Logo at the beginning -->
+      <a class="navbar-brand" href="#">
+        <img src="st2.jpg" width="80" height="110" class="d-inline-block align-top" alt="Logo 1">
+      </a>
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links -->
+      <!-- Heading in the center -->
+    
+      <!-- Logo at the end -->
+      <a class="navbar-brand" href="#">
+        <img src="rrrr.png" width="80" height="80" class="d-inline-block align-top" alt="Logo 2">
+      </a>
+    </div>
+  </nav>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div class="feedback-form">
+        <h2>Feedback Form</h2>
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="star-rating">
+          <label for="rating">Your Rating:</label><br>
+          <input type="radio" id="star5" name="rating" value="5">
+          <label for="star5" onmouseover="hoverStar(5)" onmouseout="resetStars()">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4" onmouseover="hoverStar(4)" onmouseout="resetStars()">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3" onmouseover="hoverStar(3)" onmouseout="resetStars()">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2" onmouseover="hoverStar(2)" onmouseout="resetStars()">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1" onmouseover="hoverStar(1)" onmouseout="resetStars()">&#9733;</label>
+        </div>
+        <div class="form-group">
+          <label for="feedback">Your Suggestions:</label>
+          <textarea id="feedback" class="form-control" placeholder="Enter your suggestions here..."></textarea>
+        </div>
+        <button class="btn btn-primary submit-btn" onclick="submitFeedback()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  function hoverStar(starValue) {
+    for (let i = 1; i <= 5; i++) {
+      const star = document.getElementById('star' + i);
+      if (i <= starValue) {
+        star.previousElementSibling.style.color = '#ffc107';
+      } else {
+        star.previousElementSibling.style.color = '#ccc';
+      }
+    }
+  }
+
+  function resetStars() {
+    const checkedStar = document.querySelector('.star-rating input[type="radio"]:checked');
+    if (checkedStar) {
+      hoverStar(parseInt(checkedStar.value));
+    } else {
+      for (let i = 1; i <= 5; i++) {
+        const star = document.getElementById('star' + i);
+        star.previousElementSibling.style.color = '#ccc';
+      }
+    }
+  }
+
+  function submitFeedback() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const rating = document.querySelector('.star-rating input[type="radio"]:checked');
+    const feedback = document.getElementById('feedback').value;
+
+    if (!name || !email || !rating) {
+      alert('Please fill in all fields and select a rating!');
+      return;
+    }
+
+   
+
+    alert('Thank you for your feedback!');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <button id="screenshotButton">Save as image</button>
+    
+    <script>
+        document.getElementById('screenshotButton').addEventListener('click', function() {
+            html2canvas(document.body).then(function(canvas) {
+                // Convert the canvas to a data URL and create an anchor element
+                let link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = 'screenshot.png';
+                // Trigger the download by simulating a click
+                link.click();
+            });
+        });
+    </script>
+</body>
+</html>
